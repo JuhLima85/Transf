@@ -1,0 +1,335 @@
+<app-banner-carousel></app-banner-carousel>
+<div class="infoBuscaContainer">
+    <div class="saudacoesInfoBusca">Bom dia, <span>Márcia Pimentel!</span></div>
+    <div class="containerNotificacoesPendentes">
+      <span class="material-symbols-outlined"> info </span>
+      <div class="tituloNotificacoes">
+        Você possui 6 avisos de férias pendentes de assinatura.
+      </div>
+      <span
+        style="height: 12px; width: 12px; font-size: 12px"
+        class="material-symbols-outlined"
+      >
+        arrow_forward
+      </span>
+    </div>
+    <div class="inputBuscaContainer">
+      <input type="text" class="buscaInput" />
+      <span class="material-symbols-outlined"> search </span>
+    </div>
+  </div>
+  <div style="width: 100%; padding: 40px 24px 50px 24px;background:'#F7FAFA'" >
+    <app-content-carousel ></app-content-carousel>
+  </div>
+
+
+  
+  <div class="dashboardServicosContainer">
+    <div class="wrapperDashboardServicos">
+      <div class="contrachequeDashboardContainer">
+        <div class="headerServico">
+          <div class="containerIconeServicoCard">
+            <span class="material-symbols-outlined">payments </span>
+          </div>
+          <div class="tituloServico">Contra cheque</div>
+        </div>
+  
+        <div class="salarioLiquidoContainer">
+          <div *ngIf="!!salarioLiquidoVisibilidade"  class="salarioLiquido">R$ 13.954,00</div>
+          <div *ngIf="!salarioLiquidoVisibilidade" class="salarioLiquido">R$ ---</div>
+
+          <span *ngIf="!salarioLiquidoVisibilidade" (click)="salarioLiquidoVisibilidade = !salarioLiquidoVisibilidade" class="material-symbols-outlined cursor-pointer">visibility_off</span>
+          <span *ngIf="!!salarioLiquidoVisibilidade" (click)="salarioLiquidoVisibilidade = !salarioLiquidoVisibilidade" class="material-symbols-outlined cursor-pointer">visibility</span>
+        </div>
+        <div class="labelSalarioLiquido">Salário líquido</div>
+        <div class="divisoriaHorizontalDashboardServicos"></div>
+        <div *ngIf="!salarioLiquidoVisibilidade" class="salarioBruto">R$ ---</div>
+        <div *ngIf="!!salarioLiquidoVisibilidade" class="salarioBruto">R$ 28.499,00</div>
+        <div class="labelSalarioBruto">Salário bruto</div>
+  
+        <div class="recebidoEm">Recebido em DEZ/2022</div>
+  
+        <div style="margin-top: auto; margin-bottom: 0px;" class="ctaButtonDashboardServicos cursor-pointer">Ir para Contracheque</div>
+      </div>
+      <div class="auxiliosDashboadContainer">
+        <div class="headerServico">
+          <div class="headerPaymentIcon containerIconeServicoCard">
+            <span class=" material-symbols-outlined">payments </span>
+          </div>
+          <div class="headerRestaurantIcon containerIconeServicoCard-verde ">
+            <span class="material-symbols-outlined">
+              restaurant
+            </span>
+          </div>
+          <div class="tituloServico">Auxílios</div>
+        </div>
+        
+        <div class="descAuxiliosDashboardContaine">
+          Consulte seu saldo e faça alterações dos percentuais dos auxílios refeição e alimentação.
+        </div>
+        <div class="porcentagemAuxiliosDashboardContainer">
+          <div class="porcentagemContainer">
+            <div class="porcentagem">30%</div>
+          </div>
+          <div class="porcentagemContainer">
+            <div class="porcentagem">70%</div>
+          </div>
+        </div>
+        <div class="progressAuxiliosDashboardContainer">
+          <div class="containerIconeServicoCard">
+            <span class="material-symbols-outlined">
+              shopping_cart
+            </span>
+          </div>          
+          <div class="containerIconeServicoCard-verde ">
+            <span class="material-symbols-outlined">
+              restaurant
+            </span>
+          </div>
+        </div>
+
+        <div class="labelsAuxiliosDashboardContainer">
+          <div class="labelAuxilio">Auxílio<br/> Alimentação</div>
+          <div class="labelAuxilio">Auxílio<br/> Refeição</div>
+        </div>
+        <div class="valoresAuxiliosDashboardContainer">
+          <div class="valorAuxilio">R$ 954,00</div>
+          <div class="valorAuxilio">R$ 2.900,00</div>
+        </div>
+
+        <div class="valorTotalBeneficio">
+          Valor total do benefício: <span>R$3.854,00</span>
+        </div>
+
+        <div class="ctaButtonDashboardServicos cursor-pointer" style="margin-top:50px;margin-bottom: 0px;">Ajustar valores</div>
+      </div>
+
+      <div class="feriasEapipDashboardContainer">
+        <div class="feriasDashboardContainer">
+          <div class="containerIconeServicoCard">
+            <span class="material-symbols-outlined">
+              beach_access
+            </span>
+          </div>
+          <div class="numericoServico">30</div>
+          <div class="ctaServicoDashboardContainer cursor-pointer">
+            <div>Dias disponíveis para férias. 
+              Simular aqui</div>
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+
+          </div>
+        </div>
+        <div class="apipDashboardContainer">
+          <div class="containerIconeServicoCard">
+            
+            <span class="material-symbols-outlined">
+              event_note
+            </span>
+          </div>
+          <div class="numericoServico">13</div>
+          <div class="ctaServicoDashboardContainer cursor-pointer">
+            <div>APIPs disponíveis para conversão</div>
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+ 
+  </div>
+
+  <div class="aniversariantesDaUnidadeContainer">
+    <mat-accordion class="matAccordionAniversariantes"  >
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="headerAniversariantesUnidade">
+              <div class="containerIconeServicoCard">
+                <span class="material-symbols-outlined">cake </span>
+              </div>
+              <span>Aniversariantes da sua unidade</span>
+            </div>
+          </mat-panel-title>
+         
+        </mat-expansion-panel-header>
+        <div class="unidadeListadaAniversariantes">
+          CESOB - 5088
+        </div>
+
+        <div class="divisoriaHojeAniversariantes">
+          Hoje, 22 de fevereiro
+        </div>
+        <div class="aniversarianteLinha">
+          <div class="dataAniversariante">
+            22
+          </div>
+          <div class="nomeEmailAniversariante">
+            <div class="nome">Janaína Ignácia Ramos e Cerqueira</div>
+            <div class="email">j.ignacia@caixa.gov.br</div>
+          </div>
+        </div>
+        <div class="divisoriaAniversariantes">
+          Fevereiro
+        </div>
+        <div class="aniversarianteLinha">
+          <div class="dataAniversariante">
+            23
+          </div>
+          <div class="nomeEmailAniversariante">
+            <div class="nome">Antônio Severino de Alencar Soares Oliveira da Costa Paula e Silva Junior</div>
+            <div class="email">a.severino@caixa.gov.br</div>
+          </div>
+        </div>
+        <div style="padding-left: 52px;" class="aniversarianteLinha">
+          
+          <div class="nomeEmailAniversariante">
+            <div class="nome">Antônio Severino de Alencar Soares Oliveira da Costa Paula e Silva Junior</div>
+            <div class="email">a.severino@caixa.gov.br</div>
+          </div>
+        </div>
+        <div class="aniversarianteLinha">
+          <div class="dataAniversariante">
+            24
+          </div>
+          <div class="nomeEmailAniversariante">
+            <div class="nome">Antônio Severino de Alencar Soares Oliveira da Costa Paula e Silva Junior</div>
+            <div class="email">a.severino@caixa.gov.br</div>
+          </div>
+        </div>
+        <div class="footerAniversariante">
+        <div style="max-width: 246px;" class="ctaButtonDashboardServicos cursor-pointer">Ver todos os aniversariantes</div>
+        
+        </div>
+      </mat-expansion-panel>
+      
+    </mat-accordion>
+    
+  </div>
+  <div class="maisServicosContainer">
+    <div class="wrapperMaisServicos"> 
+
+      <div class="maisServicosTituloContainer">
+
+      <div class="tituloMaisServicos">
+        <span></span>
+        <div>Mais serviços</div>
+      </div>
+      <div class="ctaBtnFilled cursor-pointer">
+        Ir para serviços
+      </div>
+    </div>
+
+      <div class="containerIconesServicos">
+
+        <div class="linhaIconesServicos">
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                attach_money
+                </span>
+            </div>
+            <div class="labelIconeServico">Contra<br/> cheque</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                cake
+                </span>
+            </div>
+            <div class="labelIconeServico">Aniversários</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                beach_access
+                </span>
+            </div>
+            <div class="labelIconeServico">Férias</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                attach_money
+              </span>
+            </div>
+            <div class="labelIconeServico">IRPF</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                calendar_add_on
+                </span>
+            </div>
+            <div class="labelIconeServico">APIP/LP</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                medical_services
+                </span>
+            </div>
+            <div class="labelIconeServico">Atestados e licenças</div>
+          </div>
+        </div>
+        <div class="linhaIconesServicos">
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">logout</span>
+            </div>
+            <div class="labelIconeServico">FUNCEF</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                restaurant
+                </span>
+            </div>
+            <div class="labelIconeServico">Auxílios</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                work_history
+                </span>
+            </div>
+            <div class="labelIconeServico">Adianta<br/>mentos</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">event_note</span>
+            </div>
+            <div class="labelIconeServico">Afastamentos</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                favorite
+                </span>
+            </div>
+            <div class="labelIconeServico">Acolhe</div>
+          </div>
+          <div class="colunaIconeServico">
+            <div class="containerIconeServicoCard-xl">
+              <span class="material-symbols-outlined">
+                person
+                </span>
+            </div>
+            <div class="labelIconeServico">Perfil</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+  </div>
+
+  
+ 
+  

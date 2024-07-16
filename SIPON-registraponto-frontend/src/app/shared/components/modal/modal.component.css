@@ -1,0 +1,178 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    min-height: 290px;
+    border-radius: var(--dsc-border-radius-nano, 4px);
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    background: #FFFFFF;    
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+    box-sizing: border-box;
+  }  
+ 
+  .modal.show {
+    opacity: 1;
+  }  
+  
+  .header {
+    width: 100%;
+    height: 96px;   
+    grid-row: 1; 
+    display: flex;       
+    align-items: center; 
+    justify-content: space-between; 
+    padding: var(--dsc-spacing-smaller, 24px);
+    gap: var(--dsc-spacing-smaller, 24px);
+    border-radius: var(--dsc-border-radius-nano --dsc-border-radius-nano --dsc-border-radius-none --dsc-border-radius-none, 4px 4px 0);
+    border: 0px 0px 1px 0px;
+    opacity: 1;
+    background: var(--color-bg-neutral-1-grayscale-white, #FFFFFF);
+    border-bottom: 1px solid var(--color-border-neutral-3-cinza-cx-grayscale-50, #D0E0E3);    
+  }
+
+  .container-title {
+    width: auto;
+    max-width: 480px;
+    height: 39px;
+    gap: 8px;    
+    background: #FFFFFF;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;     
+  }
+
+  .title {    
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+    text-align: left;
+  }
+
+  .container-icon {
+    width: 48px; 
+    height: var(--buttonheightsizelarge, 48px);
+    padding: var(--dsc-spacing-nano, 2px);
+    gap: var(--dsc-spacing-nano, 4px);
+    border-radius: var(--dsc-border-radius-nano, 4px);
+    border: 0px 0px 1px 0px;     
+    display: flex; 
+    align-items: center;
+    justify-content: center;   
+    background: #FFFFFF;    
+  }
+
+  .icon {
+    width: 100%; 
+    height: 100%;  
+    display: block;    
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+  }
+
+  .body {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    gap: var(--dsc-spacing-nano, 8px);        
+  }
+
+  .hora {
+    width: 552px;
+    height: 90px;        
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;   
+    color: var(--color-content-neutral-4-grayscale-110, #404B52);    
+    display: flex;            
+    align-items: center;    
+     
+  }
+
+  .hora-content { 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .hora strong {    
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    }
+
+    .footer {
+    width: 100%;
+    height: 64px;   
+    padding: 0px 24px 24px 24px;
+    gap: var(--dsc-spacing-tiny, 24px);
+    border-radius: var(--dsc-border-radius-none --dsc-border-radius-none --dsc-border-radius-nano --dsc-border-radius-nano, 0 0 4px 4px);    
+    display: flex;         
+    justify-content: flex-end; 
+    align-items: center;   
+    
+    }
+
+    .button-cancelar {
+    width: 100px; 
+    height: var(--buttonheightsizestandard, 40px);
+    padding: var(--dsc-spacing-nano --dsc-spacing-tiny --dsc-spacing-nano --dsc-spacing-tiny, 8px 16px);
+    gap: var(--dsc-spacing-nano, 8px);
+    border-radius: var(--dsc-border-radius-nano, 4px);
+    border: 1px solid #005CA9;   
+    background-color: #FFFFFF; 
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    }
+
+    .texto-cancelar {
+    width: auto; 
+    height: 24px;    
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-content-highlight-1-azul-cx-primary-90, #005CA9);
+    }
+    
+    .button-registrar-ponto {
+      width: 151px; 
+      height: var(--buttonheightsizestandard, 40px);
+      padding: var(--dsc-spacing-nano --dsc-spacing-tiny --dsc-spacing-nano --dsc-spacing-tiny, 8px 16px);
+      gap: var(--dsc-spacing-nano, 8px);
+      border-radius: var(--dsc-border-radius-nano, 4px);      
+      background-color: var(--color-bg-highlight-5-azul-cx-primary-90, #005CA9); 
+      display: flex;            
+      justify-content: center;   
+      align-items: center;       
+    }
+
+    .test-registrar-ponto {
+    width: auto; 
+    height: 24px;    
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-content-neutral-1-grayscale-white, #FFFFFF);
+    }
+  

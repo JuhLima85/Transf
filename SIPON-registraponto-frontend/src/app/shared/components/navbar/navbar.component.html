@@ -1,0 +1,64 @@
+<div class="containerNavBar">
+    <div (click)="displayMenu = true" class="containerMenu d-flex flex-column">
+        <span class="material-symbols-outlined">
+            menu
+        </span>
+        <div>Menu</div>
+
+    </div>
+
+    <div class="caixaLogoContainer">
+        <img src="assets/images/caixaLogo.png" alt="" class="caixaLogo">
+    </div>
+
+    <div class="divisoriaVerticalNavbar"></div>
+    <div class="d-flex align-items-center">
+        <div class="sigpmNavbar">SIGPM</div>
+        <div class="souCaixaNavbar">
+            Sou CAIXA
+        </div>
+    </div>
+
+    <div style="height: 40px;" class="divisoriaVerticalNavbar ml-auto"></div>    
+
+    <div class="containerAcoes gap-32">
+        <div class="d-flex flex-column align-items-center gap-4">
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+            <div>Notificações</div>
+        </div>
+        <div class="d-flex flex-column align-items-center containerAcoes gap-4">
+            <span class="material-symbols-outlined">
+                help
+            </span>
+            <div>Ajuda</div>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-4">
+            <span class="material-symbols-outlined">
+                exit_to_app
+            </span>
+            <div>Sair</div>
+        </div>
+    </div>
+</div>
+    
+<div  *ngIf="!!displayMenu" (click)="!isMouseOverMenu ?  displayMenu = false : ''" class="overlayMenuLateral">
+    <div (mouseover)="isMouseOverMenu = true" (mouseout)="isMouseOverMenu = false" class="menuLateral">
+        <div class="logoEbarraPesquisaContainer">
+            <img src="assets/images/Logo_sou_caixa.png" alt="" class="logoSouCaixa">
+            <div class="containerBarraPesquisa">
+                <input placeholder="Pesquisar" type="text" class="inputPesquisar">
+                <div class="containerIconPesquisa">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+            </div>  
+            <div class=""></div>
+        </div>
+        <div *ngIf="!!itemsMenu">
+            <app-accordion-menu [model]="itemsMenu"></app-accordion-menu>
+        </div>
+    </div>
+</div>

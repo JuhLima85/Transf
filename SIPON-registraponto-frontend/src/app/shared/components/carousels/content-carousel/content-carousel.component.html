@@ -1,0 +1,42 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+<div
+  (mouseenter)="clearTimeoutFunc()"
+  (mouseleave)="autoPlay()"
+  #wrapper
+  class="wrapper"
+>
+  <ul
+    #carousel
+    (mousedown)="dragIniciado($event)"
+    (mousemove)="dragging($event)"
+    (mouseup)="finalizarDrag($event)"
+    (scroll)="infiniteScroll()"
+    class="carousel"
+  >
+    <li *ngFor="let servico of servicosSouCaixa" class="card">
+      <div class="containerIconeServicoCard">
+        <span class="material-symbols-outlined"> {{ servico.icon }} </span>
+      </div>
+      <div class="tituloServicoCard">{{ servico.titulo }}</div>
+      <div class="containerCTAcard">
+        <div class="descServicoCard">{{ servico.desc }}</div>
+        <span class="material-symbols-outlined"> arrow_forward </span>
+      </div>
+    </li>
+  </ul>
+  <div class="containerControles">
+    <div class="containerControle">
+      <span (click)="prev()" id="left" class="material-symbols-outlined">
+        arrow_back
+      </span>
+    </div>
+    <div class="containerControle">
+      <span (click)="next()" id="right" class="material-symbols-outlined">
+        arrow_forward
+      </span>
+    </div>
+  </div>
+</div>

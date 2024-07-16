@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+@font-face {
+	font-family: 'CAIXABold';
+	src: url('./assets/fonts/caixa/CAIXAStd-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXABoldItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXABook';
+	src: url('./assets/fonts/caixa/CAIXAStd-Book.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXABookItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-BookItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXAExtraBold';
+	src: url('./assets/fonts/caixa/CAIXAStd-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXAExtraBoldItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXARegular';
+	src: url('./assets/fonts/caixa/CAIXAStd-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXAItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-Italic.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'CAIXALight';
+	src: url('./assets/fonts/caixa/CAIXAStd-Light.ttf') format('truetype');
+}
+
+
+
+@font-face {
+	font-family: 'CAIXALightItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXASemiBold';
+	src: url('./assets/fonts/caixa/CAIXAStd-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CAIXASemiBoldItalic';
+	src: url('./assets/fonts/caixa/CAIXAStd-SemiBoldItalic.ttf') format('truetype');
+}
+
+
+/* Geral */
+
+html,body{
+    overflow-x: none;
+    margin: 0;
+    max-width: 100vw;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+button{
+  border: none;
+  outline: none;
+}
+
+/* fim */
+
+/* TEMPLATES */
+
+/* fim */
+
+/* Helpers */
+
+
+@for $i from 1 through 100 {
+    .w-#{$i} {
+        width: 1% * $i;
+    }
+    .gap-#{$i}{
+      gap: 1px * $i;
+    }
+  }
+  
+  .d-flex{
+    display: flex;
+  }
+  
+  .flex-column{
+    flex-direction: column;
+  }
+  
+  .align-items-center{
+    align-items: center;
+  }
+  
+  .justify-content-center{
+    justify-content: center;
+  }
+  .justify-content-space-between{
+    justify-content: space-between;
+  }
+  
+  .ml-auto{
+    margin-left: auto;
+  }
+  
+  .mr-auto{
+    margin-right: auto;
+  }
+  
+  .flex-1{
+    flex: 1;
+  }
+
+  .col-4{
+    width:33.33333333%
+  }
+  
+  .col-8{
+    width:66.66666667%
+  }
+  /* fim */

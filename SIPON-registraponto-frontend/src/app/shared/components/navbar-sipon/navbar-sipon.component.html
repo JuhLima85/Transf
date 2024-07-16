@@ -1,0 +1,42 @@
+    <div class="containerNavBar">    
+        <div class="caixaLogoContainer">
+            <img src="assets/images/caixaLogo.png" alt="" class="caixaLogo">
+        </div>    
+
+        <div class="divisorVerticalNavbar"></div>        
+        <div class="siponNavbar">SIPON</div>
+        <div class="nomeDoSistema">
+                Sistema de Ponto Eletrônico           
+        </div>        
+    
+        <div class="containerSaudacaoSair gap-32">
+            <div class="saudacao">
+                <span class="material-symbols-outlined">
+                    Olá, {{ nomeUsuario }}!
+                </span>
+               
+            </div>
+            <div class="d-flex flex-column align-items-center containerAcoes gap-4">
+              
+            </div>
+            <div class="botaoSair" (click)="logout()">
+                <div class="exit">                
+                    <span class="material-symbols-outlined">
+                        exit_to_app
+                    </span>   
+                </div>             
+                <div>Sair</div>
+            </div>
+        </div>
+    </div>
+        
+    <div  class="overlayMenuLateral">
+        <div >
+            <div class="logoEbarraPesquisaContainer">
+                <img src="assets/images/Logo_sou_caixa.png" alt="" class="logoSouCaixa">
+                
+                <div class=""></div>
+            </div>
+           
+        </div>
+    </div>

@@ -1,0 +1,751 @@
+.dummyHeader { 
+    height: 300px;
+    background-color: blue;
+  }
+  
+  .infoBuscaContainer {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: 0.5px solid
+      var(--color-border-neutral-3-cinza-cx-grayscale-50, #d0e0e3);
+    background: var(--color-bg-highlight-1-primary-10, #e5f1fc);
+  }
+  
+  .saudacoesInfoBusca {
+    flex: 1;
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: var(--color-content-highlight-1-azul-cx-primary-90, #005ca9);
+    span {
+      font-family: 'CAIXABold',sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      text-align: left;
+    }
+  }
+  
+  .containerNotificacoesPendentes {
+    flex: 1;
+    background: var(--color-bg-warning-2-attention-30, #fee59b);
+  
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-bg-accent-7-secondary-130, #663a00);
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 0px #0000001a;
+  }
+  
+  .tituloNotificacoes {
+    color: var(--color-content-warning-3-attention-130, #654c02);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  
+  .inputBuscaContainer {
+    margin-left: 24px;
+    flex: 1;
+    padding: 11.5px 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--color-border-neutral-4-grayscale-70, #9eb2b8);
+    background: var(--color-bg-neutral-1-grayscale-white, #ffffff);
+    border-radius: 4px;
+  }
+  .buscaInput {
+    width: 100%;
+    outline: 0;
+    border: none;
+    //styleName: text large/400 (regular);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: var(--color-content-neutral-3-grayscale-90, #64747a);
+  
+    &::placeholder {
+      //styleName: text large/400 (regular);
+      font-family: 'CAIXARegular',sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      text-align: left;
+      color: var(--color-content-neutral-3-grayscale-90, #64747a);
+    }
+    &:focus{
+      outline: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+  // dashbooard serviços
+  
+  .dashboardServicosContainer {
+    padding: 0px 5.3%;
+    width: 100%;
+    background: #F7FAFA;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  
+  .wrapperDashboardServicos {
+    flex: 1;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  
+  .auxiliosDashboadContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--color-bg-neutral-1-grayscale-white, #ffffff);
+    box-shadow: 0px 10px 60px 0px #3a48591a;
+    border-radius: 16px;
+  }
+  .containerIconeServicoCard-verde {
+    background: var(--color-bg-decorative-2-tertiary-30, #b9ebe3);
+  
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    min-width: 32px;
+  
+    min-height: 32px;
+    max-width: 32px;
+  
+    max-height: 32px;
+    span {
+      color: var(--color-bg-decorative-5-tertiary-90, #359485);
+    }
+  }
+  .contrachequeDashboardContainer {
+    flex: 1;
+    height: 467px;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--color-bg-neutral-1-grayscale-white, #ffffff);
+    box-shadow: 0px 10px 60px 0px #3a48591a;
+    border-radius: 16px;
+  }
+  .headerServico {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    .headerPaymentIcon{
+      z-index: 2;
+      margin-right: 22px;
+    }
+    .headerRestaurantIcon{
+      position: absolute;
+      z-index: 1;
+      left: 26px;
+    }
+  }
+  
+  
+  .containerIconeServicoCard {
+    background: var(--color-bg-highlight-2-primary-30, #a0d2fc);
+    border-radius: 50%;
+    min-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 32px;
+    max-width: 32px;
+  
+    max-height: 32px;
+    span {
+      color: var(--color-bg-highlight-6-primary-110, #00437a);
+    }
+  }
+  .containerIconeServicoCard-xl {
+    background: var(--color-bg-highlight-2-primary-30, #a0d2fc);
+    border-radius: 50%;
+    min-width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
+    max-width: 56px;
+  
+    max-height: 56px;
+    span {
+      font-size: 20px;
+      color: var(--color-bg-highlight-6-primary-110, #00437a);
+    }
+  }
+  .tituloServico {
+    //styleName: heading tiny/700 (bold);
+    font-family: 'CAIXABold',sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    color: var(--color-content-highlight-2-primary-110, #00437a);
+  }
+  .salarioLiquidoContainer {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      color: var(--color-bg-highlight-6-primary-110, #00437a);
+    }
+  }
+  .salarioLiquido {
+    //styleName: heading small/700 (bold);
+    font-family: 'CAIXABold',sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: left;
+    color: var(--color-content-neutral-4-grayscale-110, #404b52);
+  }
+  .labelSalarioLiquido {
+    //styleName: text standard/600 (semibold);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: var(--color-content-neutral-4-grayscale-110, #404b52);
+  }
+  .divisoriaHorizontalDashboardServicos {
+    width: 100%;
+    height: 1px;
+    margin: 17px 0px;
+    background: var(--color-border-neutral-3-cinza-cx-grayscale-50, #d0e0e3);
+  }
+  .salarioBruto {
+    //styleName: heading tiny/600 (semibold);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: var(--color-content-neutral-4-grayscale-110, #404b52);
+  }
+  
+  .labelSalarioBruto {
+    //styleName: text small/400 (regular);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: var(--color-content-neutral-4-grayscale-110, #404b52);
+  }
+  
+  .recebidoEm {
+    //styleName: text standard/400 (regular);
+    margin-top: 22px;
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+  
+  .ctaButtonDashboardServicos {
+    background: transparent;
+    border: 1px solid #005ca9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 4px;
+    color: var(--color-content-highlight-1-azul-cx-primary-90, #005CA9);
+  
+    margin: 24px 0px 24px auto;
+  
+    //styleName: text standard/600 (semibold);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  
+  .descAuxiliosDashboardContaine{
+    //styleName: text small/400 (regular);
+  font-family: 'CAIXARegular',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  
+  margin-top: 16px;
+  
+  }
+  
+  .porcentagemAuxiliosDashboardContainer{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .porcentagemContainer{
+      border-radius: 10px;
+      padding: 11px 20px;
+      box-shadow: 0px 0px 15px 0px #0000001A;
+      background: var(--color-bg-neutral-1-grayscale-white, #FFFFFF);
+      //styleName: text small/400 (regular);
+      font-family: 'CAIXARegular',sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      
+    }
+  }
+  
+  .progressAuxiliosDashboardContainer{
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .labelsAuxiliosDashboardContainer{
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .labelAuxilio{
+      //styleName: text standard/400 (regular);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  
+    }
+  }
+  .valoresAuxiliosDashboardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .valorAuxilio{
+    //styleName: heading tiny/700 (bold);
+  font-family: 'CAIXAExtraBold',sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  
+  
+    }
+  }
+  
+  .valorTotalBeneficio{
+    margin-top: 12px;
+    //styleName: text standard/400 (regular);
+  font-family: 'CAIXARegular',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  span{
+    //styleName: text standard/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  
+  }
+  
+  }
+  
+  .feriasEapipDashboardContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 467px;
+  }
+  
+  .feriasDashboardContainer{
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 1px 30px 0px #0000000D;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    flex: 1;
+    
+  
+  }
+  .apipDashboardContainer{
+    flex: 1;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 1px 30px 0px #0000000D;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+  
+  .numericoServico{
+    margin-top: auto;
+    //styleName: heading big/700 (bold);
+  font-family: 'CAIXAExtraBold',sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50.4px;
+  text-align: left;
+  
+  color: var(--color-content-highlight-2-primary-110, #00437A);
+  
+  
+  }
+  
+  .ctaServicoDashboardContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div{
+      //styleName: text standard/400 (regular);
+  font-family: 'CAIXARegular',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--color-content-neutral-5-grayscale-130, #22292E);
+  
+  
+    }
+  
+    span{
+      color: var(--color-bg-highlight-6-primary-110, #00437A);
+  
+    }
+  
+  }
+  
+  .headerAniversariantesUnidade{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    //styleName: heading tiny/700 (bold);
+    font-family: 'CAIXAExtraBold',sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    color: var(--color-content-highlight-2-primary-110, #00437A);
+  
+  
+  
+  }
+  
+  .footerDummy{
+    width: 100%;
+    max-height: 64px;
+    padding: 24px 10%;
+    background: #005CA9;
+    color: white;
+  
+    .wrapperFooter{
+      display: flex;
+      justify-content: space-between;
+      
+      align-items: center;
+      width: 100%;
+      .souCaixaFooter{
+        //styleName: Textos Book/dsc-text-book04;
+  font-family: 'CAIXARegular',sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.6px;
+  text-align: left;
+  
+      }
+      .versaoFooterContainer{
+        display: flex;
+        align-items: flex-end;
+        font-family: 'CAIXABold',sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-align: left;
+  
+      }
+    }
+  
+  }
+  .aniversariantesDaUnidadeContainer{
+    background: #F7FAFA;
+    padding: 0px 70px;
+    padding-bottom: 40px;
+  }
+  
+  
+  .maisServicosContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--color-bg-highlight-1-primary-10, #E5F1FC);
+  
+  }
+  
+  .wrapperMaisServicos{
+    width: 70%;
+    padding: 60px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+  }
+  
+  
+  .tituloMaisServicos{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    span{
+      background: #F59300;
+      width: 4px;
+      height: 18px;
+    }
+    div{
+      //styleName: heading tiny/700 (bold);
+  font-family: 'CAIXAExtraBold',sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  color: var(--color-content-highlight-2-primary-110, #00437A);
+  
+  
+    }
+  }
+  
+  .containerIconesServicos{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  
+  .linhaIconesServicos{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .colunaIconeServico{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .labelIconeServico{
+    //styleName: text small/400 (regular);
+  font-family: 'CAIXARegular',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #3A4859;
+  
+  
+  }
+  
+  .ctaBtnFilled{
+    background: #D87B00;
+  max-width: 217px;
+  border-radius: 4px;
+  padding: 8px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  //styleName: text standard/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  
+  color: white;
+  
+  }
+  
+  
+  .unidadeListadaAniversariantes{
+    padding: 6px 0px;
+    border-bottom: 1px solid var(--color-border-neutral-2-grayscale-30, #EBF1F2);
+    //styleName: text standard/600 (semibold);
+    font-family: 'CAIXABold',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  
+  }
+  
+  .divisoriaHojeAniversariantes{
+    padding: 15px 0px;
+    //styleName: caption standard/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20.4px;
+  
+  color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  text-transform: uppercase;
+  
+  }
+  
+  .aniversarianteLinha{
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dataAniversariante{
+    background: #E2F2FF;
+  
+    //styleName: text small/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  border-radius: 50%;
+  color: var(--color-content-highlight-1-azul-cx-primary-90, #005CA9);
+  
+  height: 42px;
+  width: 42px;
+  max-height: 42px;
+  max-width: 42px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+  .nomeEmailAniversariante{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    .nome{
+      //styleName: text standard/700 (bold);
+  font-family: 'CAIXAExtraBold',sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  
+  color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  
+    }
+  
+    .email{
+      //styleName: text small/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  
+  color: var(--color-content-neutral-4-grayscale-110, #404B52);
+  
+  
+    }
+  }
+  
+  .divisoriaAniversariantes{
+    //styleName: caption standard/600 (semibold);
+  font-family: 'CAIXABold',sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20.4px;
+  color: #4E6178;
+  
+  text-transform: uppercase;
+  padding: 7px 0px;
+  
+  }
+  
+  .maisServicosTituloContainer{
+    gap: 40px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  /* q */
+  .col-4{
+    width:33.33333333%
+  }
+  
+  .col-8{
+    width:66.66666667%
+  }
+  
+  .d-flex{
+    display: flex;
+  }
+  
+  .justify-content-center{
+    justify-content: center;
+  }
+  
+  .align-items-center{
+    align-items: center;
+  
+  }
+  
+  .flex-column{
+    flex-direction: column;
+  }
+  
+  .cursor-pointer{
+    cursor: pointer;
+  }

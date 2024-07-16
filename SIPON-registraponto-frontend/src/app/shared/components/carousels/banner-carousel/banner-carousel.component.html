@@ -1,0 +1,14 @@
+<div class="mainContainer">
+
+    <div  (mousemove)="dragging($event)" (mousedown)="dragIniciado($event)" (mouseup)="finalizarDrag($event)"  class="carousel-inner"  dir="ltr" #carousel>
+      <div (click)="ctaBanner(item)"  #carouselInner draggable="false"  *ngFor="let item of items" class="carousel-item">
+        <a [href]="item.link" *ngIf="!!item.link && !isDragging" class="linkCarousel"></a>
+        <img class="bannerImagem" draggable="false" [src]="item.img" [alt]="item.alt"/>
+      </div>
+    </div>
+ 
+  <div class="buttonsContainers" *ngIf="showControls">   
+    <button [ngClass]="{'indicator': slideAtual !== i ,'indicatorCurrentSlide': slideAtual == i }" (click)="goTo(i)" *ngFor="let item of items; index as i"></button>
+  </div>
+</div>
+

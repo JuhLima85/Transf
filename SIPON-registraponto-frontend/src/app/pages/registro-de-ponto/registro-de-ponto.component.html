@@ -1,0 +1,93 @@
+<div class="mainContainer">
+    <app-mensagem-feedback *ngIf="mensagemFeedback" [titulo]="tituloMensagem" [mensagem]="mensagemFeedback" tipo="success"></app-mensagem-feedback> 
+    <div class="elementoTituloEcontador">
+        <div class="elementoETitulo">
+            <div class="elemento">
+                <img src="assets/images/novo_web/elemento-da-marca.png" alt="Timer">
+            </div>
+            <div class="containerTitulo">
+                <div class="titulo">Registro de ponto eletrônico</div>                
+            </div>                  
+        </div>
+        <div class="cantainerContador">
+            <img class="imagemContador" src="assets/images/novo_web/timer.png" alt="Timer">
+            <div class="contadorDeTempo">Tempo de página restante: 05:00 minutos</div>
+        </div>
+    </div>
+
+    <div class="containerRegistro">
+        <div class="corpoRegistro">
+            <div class="todayData">
+                <img class="imagemToday" src="assets/images/novo_web/today.png" alt="Today">
+                <div class="data"> 
+                    <span>{{ jornadaTrabalho === 'noturna' ? dataAtual.split('/')[0] : '' }}</span>&nbsp;
+                    <span>
+                        {{ jornadaTrabalho === 'noturna' ? (' a ' + dataPosterior) : dataAtual }}
+                    </span>
+                </div>
+            </div>
+            <div class="containerHoraBotao" >
+                <div class="containerHora">
+                    <div class="hora">Horário local: {{ horarioAtual}}</div>
+                </div>
+                <button class="custom-button" (click)="abrirModal()" [disabled]="botaoDesabilitado" variant="secondary" size="large" state="default">
+                    <div class="button-content">
+                        <div class="icon-container">
+                            <img src="assets/images/novo_web/more_time.png" alt="Ícone">
+                        </div>
+                        <span class="button-label">Incluir {{ proximaMarcacao }}</span>
+                    </div>
+                </button> 
+                <app-modal *ngIf="modalService.showModal$ | async" [horarioLocal]="horarioAtual"></app-modal>                              
+            </div>
+        </div>   
+        
+        <div class="corpoHistorico">
+            <div class="containerSubtitulo">
+                <div class="imagemAccessTime">
+                    <img src="assets/images/novo_web/access_time.png" alt="Ícone">
+                </div>
+                <div class="subtitulo">
+                    Registro de entrada e saída do dia
+                </div>
+            </div>
+
+            <div class="containerImagemPonto">
+                <div class="sugestao" *ngIf="marcacoes.length === 0">
+                  Você ainda não possui registro de ponto hoje.
+                </div> 
+
+                <ng-container *ngFor="let marcacao of marcacoes">
+                    <div class="card" *ngIf="marcacao.entrada">
+                      <div class="carHeader">
+                        <div class="imagemVectorEntrada">
+                          <img src="assets/images/novo_web/Vector.png" alt="Vector entrada">
+                        </div>
+                        <div class="containerHorarioTexto">
+                          <div class="horario">{{ formatarHora(marcacao.entrada) }}</div>
+                          <div class="texto">Entrada</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" *ngIf="marcacao.saida">
+                      <div class="carHeader">
+                        <div class="imagemVectorEntrada">
+                          <img src="assets/images/novo_web/Vector.png" alt="Vector saida">
+                        </div>
+                        <div class="containerHorarioTexto">
+                          <div class="horario">{{ formatarHora(marcacao.saida) }}</div>
+                          <div class="texto">Saída</div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>  
+              </div>                                     
+        </div>        
+    </div>   
+
+    <div class="unidadeLotacao">
+        <div class="">
+            <strong>Unidade de lotação:</strong> GN Desenvolvimento Desempenho de Pessoas <strong>| Fuso horário:</strong> Salvador, Bahia (UTC-3)
+        </div>       
+    </div>    
+</div>

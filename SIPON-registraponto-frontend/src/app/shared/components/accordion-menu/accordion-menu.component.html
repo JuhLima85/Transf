@@ -1,0 +1,32 @@
+<mat-accordion id="accordionMenuPrincipal">
+   
+    <mat-expansion-panel  [routerLink]=" servico.routerLink && ['/',servico.routerLink]" routerLinkActive="router-link-active"   (click)="servicoSelecionado = servico.label"  id="servicoMenuExpansionPanel" [disabled]="servico.items.length > 0 ? false : true" [ngStyle]="{'pointer-event': servico.items.length == 0 ? 'none' : 'inherit'}" [hideToggle]="servico.items.length > 0 ? false : true" *ngFor="let servico of model[0].items"  (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header class="headerServicoMenu">
+        <mat-panel-title>
+            <div [ngClass]="{tituloServicoMenuContainer: true,tituloServicoMenuContainerSelecionado: servicoSelecionado == servico.label}">
+                <img *ngIf="servico.icon.includes('/')" [src]="servico.icon" alt="" class="iconeItemMenu">
+                <span  *ngIf="!servico.icon.includes('/')" class="material-symbols-outlined">{{servico.icon}}</span>
+                <div>
+                {{servico.label}}
+
+                </div>
+
+            </div>
+        </mat-panel-title>
+      
+      </mat-expansion-panel-header>
+      <div *ngIf="!!servico.items">
+
+      <div (click)="subServicoSelecionado = subServico.label" [routerLink]="['/',subServico.routerLink]" routerLinkActive="router-link-active"  *ngFor="let subServico of servico.items"  [ngClass]="{linhaSubServicoMenuDisabled: !subServico.routerLink,linhaSubServicoMenu: !!subServico.routerLink,linhaSubServicoMenuSelecionado: subServicoSelecionado === subServico.label}" class="linhaSubServicoMenu">
+        <img *ngIf="subServico.icon.includes('/')" [src]="subServico.icon" alt="" class="iconeItemMenu">
+                <span *ngIf="!subServico.icon.includes('/')" class="material-symbols-outlined">{{subServico.icon}}</span>
+                <div>
+                {{subServico.label}}
+
+                </div>
+      </div>
+    </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  

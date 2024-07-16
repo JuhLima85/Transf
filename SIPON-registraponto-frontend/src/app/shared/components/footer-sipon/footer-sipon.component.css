@@ -1,0 +1,42 @@
+.footerContainer{
+    width: 100%;
+    max-height: 64px;
+    padding: 24px 10%;
+    background: #005CA9;
+    color: white;    
+  
+    .wrapperFooter{
+      display: flex;
+      justify-content: space-between;
+      
+      align-items: center;
+      width: 100%;
+      .integraMaisFooter{
+        /*styleName: Textos Book/dsc-text-book04;*/
+        font-family: 'Futura Bk BT',sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.6px;
+        text-align: left;  
+      }
+      .versaoFooterContainer{
+        display: flex;
+        align-items: flex-end;
+        div{
+        
+          font-family: 'Futura',sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          text-align: left;
+          margin-left: 8px;
+        }
+
+        span{
+          font-variation-settings: 'FILL' 1;
+          font-size: 16px;
+        }
+  
+      }
+    }
+  
+  }

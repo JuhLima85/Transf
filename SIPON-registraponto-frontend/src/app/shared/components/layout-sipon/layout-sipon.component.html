@@ -1,0 +1,14 @@
+<div class="appComponentMainContainer">
+
+    <app-navbar-sipon></app-navbar-sipon>
+    
+    <div class="appComponentContentContainer">
+        <router-outlet></router-outlet>
+        <app-modal *ngIf="modalService.showModal$ | async as showModal; else loading"></app-modal>
+        <ng-template #loading>Carregando...</ng-template> 
+
+
+    </div>
+
+    <app-footer-sipon></app-footer-sipon>
+</div>

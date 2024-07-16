@@ -1,0 +1,31 @@
+<div class="modal" (click)="closeModal()" (keydown.enter)="closeModal()"> 
+    <div class="header" (click)="$event.stopPropagation()" (keydown.enter)="$event.stopPropagation()">
+      <div class="container-title">
+        <div class="title">
+          <h5>Deseja incluir a entrada?</h5>
+        </div>
+      </div>
+      <button class="container-icon" (click)="closeModal()" (keydown.enter)="closeModal()">
+        <div class="icon">
+          <img src="assets/images/novo_web/Close.png" alt="Ícone Fechar">
+        </div>
+      </button>
+    </div>
+    <div class="body">
+      <div class="hora">
+        <div class="hora-content">
+          <p>Horário local: {{horarioLocal}}</p>
+          <p><strong>Atenção:</strong> o registro não poderá ser alterado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="button-cancelar" (click)="cancelar()" (keydown.enter)="cancelar()">
+        <span  class="texto-cancelar">Cancelar</span >
+      </button>
+      <button class="button-registrar-ponto" (click)="registrarPonto()" (keydown.enter)="registrarPonto()">
+        <span  class="test-registrar-ponto">Registrar ponto</span >
+      </button>
+    </div>
+  </div>
+  

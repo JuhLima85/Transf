@@ -1,0 +1,179 @@
+
+.containerNavBar{
+    padding: 22px 8px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    max-height: 64px;
+    background: #005CA9;
+
+}
+
+.containerMenu{
+    cursor: pointer;
+    align-items: center;
+    color: white;
+    
+    span{
+        font-size: 24px;
+    }
+    div{
+        //styleName: text small/400 (book);
+        font-family: 'CAIXARegular',sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+}
+.caixaLogoContainer{
+    margin-left: 22px;
+    img{
+        width: 70px;
+        height: 16px;
+
+    }
+}
+.divisoriaVerticalNavbar{
+    width: 1px;
+    height: 24px;
+    background: var(--color-bg-neutral-4-cinza-cx-grayscale-50, #D0E0E3);
+    margin: 0px 16px;
+}
+.sigpmNavbar{
+    //styleName: heading small/600 (semibold);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color: white;
+
+
+}
+.souCaixaNavbar{
+    margin-left: 16px;
+
+    //styleName: heading tiny/600 (semibold);
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.containerAcoes{
+    display: flex;
+    align-items: center;
+    color: white;
+    .d-flex.flex-column{
+        cursor: pointer;
+        span{
+            font-size: 24px;
+            color: white;
+            font-variation-settings: 'FILL' 1;
+        }
+        div{
+            //styleName: Textos Bold/dsc-text-bold05;
+            font-family: 'CAIXABold',sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+    }
+}
+
+
+
+/* side bar */
+
+.overlayMenuLateral{
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    background: rgba(0,0,0,0.2);
+}
+
+
+.menuLateral{
+    width: 263px;
+    height: 100vh;
+    background: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.logoEbarraPesquisaContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.containerBarraPesquisa{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #8FB5BC;
+    border-radius: 4px;
+
+}
+
+.inputPesquisar{
+    height: 32px;
+    max-height: 32px;
+    padding: 7px 8px;
+    //styleName: Textos Book/dsc-text-book04;
+    font-family: 'CAIXARegular',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+    text-align: left;
+    border: none;
+    outline: 0;
+
+    color: #8FB5BC;
+    flex: 1;
+    &:focus{
+        border: none;
+        outline: 0;
+    }
+
+    &::placeholder{
+        font-family: 'CAIXARegular',sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.6px;
+        text-align: left;
+    
+        color: #8FB5BC;
+    }
+
+}
+
+.containerIconPesquisa{
+    min-height: 32px;
+    min-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #3A4859;
+
+    background: #EFF4F5;
+    span{
+        font-size: 16px;
+    }
+
+    
+
+}
+
+/* fim */

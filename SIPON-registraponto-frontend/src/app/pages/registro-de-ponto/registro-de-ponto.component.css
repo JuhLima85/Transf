@@ -1,0 +1,309 @@
+.mainContainer {        
+    width: auto; 
+    max-width: 1267px; 
+    height: auto;   
+    max-height: 875px;    
+    position: static;     
+    margin: 0px auto 0px auto; 
+    gap: 40px;      
+}
+
+.elementoTituloEcontador {
+    width: 100%;
+    height: 77px; 
+    padding: 16px 24px 16px 32px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.elementoETitulo {   
+    display: flex;
+    align-items: center;
+    gap: 7px;    
+}
+
+.elemento {
+    width: 29.07px;
+    height: 32px;   
+    margin-bottom: 10px; 
+}
+
+.titulo {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44.8px;    
+    color: var(--color-content-highlight-1-azul-cx-primary-90, #005CA9);
+}
+
+.cantainerContador {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    width: 423px; 
+    height: 43px;
+    border-radius: 24px;
+    padding: 8px 16px;   
+    background: var(--color-bg-highlight-1-primary-10, #E5F1FC);
+}
+
+.imagemContador {
+    width: 24px;
+    height: 24px;        
+}
+
+.contadorDeTempo{
+    width: 359px;    
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 17px; 
+    font-weight: 600;
+    line-height: 27px;    
+    color: var(--color-content-highlight-2-primary-110, #00437A);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.containerRegistro {
+    width: 100%;   
+    max-height: 672px;
+    margin-top: 24px;       
+    display: flex; 
+    gap: 32px; 
+    align-items: stretch; 
+    margin-bottom: 20px;
+}
+
+.corpoRegistro {    
+    width: 325px;     
+    gap: 48px;
+    border-radius: 8px;
+    background: #FFFFFF;      
+    padding: 32px; 
+    box-sizing: border-box; 
+    min-height: 250px;    
+}
+
+.todayData {
+    display: flex; 
+    align-items: center; 
+    max-width: 350px;  
+    gap: 16px;     
+}
+
+.imagemToday{
+    width: 32px;
+    height: 32px;      
+}
+
+.data {     
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+    display: flex;             
+    flex-wrap: wrap;         
+    align-items: baseline;    
+    color: var(--color-content-highlight-1-azul-cx-primary-90, #005CA9);
+}
+
+.containerHoraBotao {   
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.containerHora {  
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hora {   
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;    
+    color: var(--color-content-neutral-4-grayscale-100, #404B52);
+}
+
+.custom-button {
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+    margin-top: 30px; 
+    border-radius: 4px;
+    background: #005CA9;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #00437A;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon-container img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button-label {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+
+  .custom-button:disabled {
+    background-color: #D0E0E3; 
+    cursor: not-allowed; 
+  }
+ 
+.corpoHistorico {
+    width: 870px;     
+    max-height: 672px;
+    border-radius: 8px;
+    padding: 32px 0px;
+    gap: 32px; 
+    background: #FFFFFF;  
+    box-sizing: border-box;
+    min-height: 250px; 
+    flex: 1; 
+}
+
+.containerSubtitulo {
+    width: 812px;
+    height: 40px;
+    display: flex; 
+    align-items: center; 
+    padding: 0px 40px 0px 32px;
+    gap: 8px;
+    background: #FFFFFF;
+}
+
+.imagemAccessTime {
+    width: 32px;
+    height: 32px;    
+}
+
+.subtitulo{
+    width: 424px;
+    height: 32px;
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 24px;
+    font-weight: 700;    
+    line-height: 33.6px;
+    text-align: left;
+    color: var(--color-content-highlight-1-cx-primary-90, #005CA9);    
+}
+
+.containerImagemPonto {
+    width: 100%;      
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 32px 0px;  
+    padding: 16px 24px 16px 32px;   
+    justify-items: start; 
+    margin-top: 32px;
+}
+
+.sugestao {
+    margin-top: 30px;
+    width: 439px;
+    height: 28px;   
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;   
+}
+
+.card {
+    width: 180px;
+    height: 102px;
+    border-radius: var(--dsc-border-radius-nano, 4px);
+    border: 2px solid var(--color-border-highlight-1-azul-cx-primary-90, #005CA9);
+    padding: var(--dsc-spacing-smaller 24px, 0px 0px 0px);
+    gap: var(--dsc-spacing-smaller, 24px);        
+    display: flex;         
+    justify-content: center;  
+    align-items: center;    
+}
+
+.carHeader {
+    width: 180px;
+    height: 55px;   
+    padding: var(--dsc-spacing-none --dsc-spacing-smaller --dsc-spacing-none --dsc-spacing-smaller);
+    gap: var(--dsc-spacing-tiny, 10px);    
+    display: flex;         
+    align-items: center;   
+    justify-content: center; 
+}
+
+.imagemVectorEntrada {
+    width: 48px;
+    height: 48px;
+    padding: 6px 4px 6px 4px;  
+}
+
+.containerHorarioTexto {
+    width: Fill (68px)px;
+    height: Hug (55px)px;  
+}
+
+.horario {
+    width: 68px;
+    height: 28px;    
+    font-family: "CAIXA Std", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;  
+    color: var(--color-content-neutral-5-grayscale-130, #22292E); 
+}
+
+.texto {
+    width: 68px;
+    height: 27px;      
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: var(--color-content-neutral-3-grayscale-90, #64747A);
+}
+
+.unidadeLotacao {
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center; 
+    background: #FFFFFF;  
+    bottom: 0; 
+    padding-left: 20px; 
+}
+
+.unidadeLotacao-info{
+    width: calc(977px - 20px); 
+    height: 30px;    
+    font-family: 'CAIXA Std', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;   
+    color: var(--color-content-neutral-4-grayscale-110, #404B52);
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}

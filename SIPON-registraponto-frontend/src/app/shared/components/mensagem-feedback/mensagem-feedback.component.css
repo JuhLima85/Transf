@@ -1,0 +1,91 @@
+/* Estilo base para todos os alertas */
+.alerta {
+  width: auto; 
+  max-width: 1267px; 
+  height: auto;     
+  max-height: 79px;
+  position: static; 
+  top: auto;
+  left: auto;
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 12px 12px 12px 28px;
+  gap: 16px; 
+  border-radius: 4px; 
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  opacity: 1; 
+  margin-top: 20px; 
+  margin-bottom: 32px;  
+}
+
+.alerta .icon {
+  width: 32px;
+  height: 32px;  
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  margin-right: 16px; 
+}
+
+.alerta .icon img { 
+  width: 26.67px;
+  height: 26.67px;
+  position: static;
+  top: auto; 
+  left: auto;
+}
+
+.alerta .content {
+  width: auto;
+  max-width: 1180px;
+  height: auto; 
+  max-height: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;   
+}
+
+.alerta .titulo {
+  width: 100%;
+  height:auto;
+  max-height: 27px;  
+  font-family: 'CAIXA Std', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;   
+  color: #404B52;
+}
+
+.alerta .mensagem {
+  width: 100%;
+  height: auto;
+  max-height: 27px;
+  font-family: 'CAIXA Std', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;    
+  color: #404B52;  
+}
+
+/*Estilos para alertas específicos*/
+.alerta.success { 
+  border: 2px solid #127527; 
+  border-left: 12px solid #127527;  
+}
+
+.alerta.danger { 
+  border: 2px solid #b22c2c; 
+  border-left: 12px solid #b22c2c;  
+}
+
+.alerta.warning { 
+  border: 2px solid #CA9804; 
+  border-left: 12px solid #CA9804; 
+}
+
+.alerta.informative { 
+  border: 2px solid #038299; 
+  border-left: 12px solid #038299;  
+}

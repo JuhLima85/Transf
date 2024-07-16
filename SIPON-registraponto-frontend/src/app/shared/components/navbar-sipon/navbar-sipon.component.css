@@ -1,0 +1,147 @@
+/* Estilos padrão para desktops */
+.containerNavBar {
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: var(--color-bg-highlight-5-azul-cx-primary-90, #005CA9);
+    flex-wrap: wrap; 
+    box-sizing: border-box; 
+    min-height: 64px;
+}
+
+.caixaLogoContainer img {
+    width: 70.8px;
+    height: 16px;
+    margin-right: 16px; 
+}
+
+.divisorVerticalNavbar {
+    width: 1px;
+    height: 24px;
+    background: var(--color-bg-neutral-4-cinza-cx-grayscale-50, #D0E0E3);
+    margin: 0px 16px;
+}
+
+.siponNavbar {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33.6px;
+    text-align: left;
+    color: var(--color-content-neutral-1-grayscale-while, #FFFFFF);
+    margin-right: 16px; 
+}
+
+.nomeDoSistema {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: var(--color-content-neutral-1-grayscale-while, #FFFFFF);
+    flex-grow: 1; 
+    min-width: 150px; 
+    margin-right: 16px; 
+}
+
+.containerSaudacaoSair {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    color: white;
+    margin-right: 16px;
+}
+
+.containerSaudacaoSair .saudacao {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.containerSaudacaoSair .saudacao span {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+}
+
+.containerSaudacaoSair .botaoSair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.containerSaudacaoSair .botaoSair .exit {
+    width: 24px;
+    height: 24px;
+}
+
+.containerSaudacaoSair .botaoSair div {
+    font-family: 'CAIXA Std', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20.4px;
+    text-align: center;
+}
+
+/* Media Queries para responsividade */
+
+/* Tablets (largura mínima de 768px) */
+@media (max-width: 800px) {
+    .containerNavBar {
+        padding: 20px 16px; /* Aumenta o padding para garantir fundo azul */
+    }
+    .siponNavbar {
+        font-size: 20px;
+    }
+    .nomeDoSistema {
+        font-size: 20px; /* aqui */
+        min-width: auto;
+    }
+    .containerSaudacaoSair {
+        margin-left: auto;
+    }
+}
+
+/* Smartphones (largura máxima de 767px) */
+@media (max-width: 480px) {
+    .containerNavBar {
+        padding: 20px 8px;
+    }
+    .caixaLogoContainer img {
+        width: 70px;
+        height: 12px;
+    }
+    .divisorVerticalNavbar {
+        display: none;
+    }
+    .siponNavbar {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+    .nomeDoSistema {
+        font-size: 16px;
+        min-width: auto;
+        text-align: center;
+    }
+    .containerSaudacaoSair {
+        gap: 90px;
+    }
+    .containerSaudacaoSair .saudacao span {
+        font-size: 16px;
+    }
+    .containerSaudacaoSair .botaoSair {
+        width: auto;
+        height: auto;
+        padding: 2px 4px 8px 4px;        
+    }
+    .containerSaudacaoSair .botaoSair div {
+        font-size: 12px;
+    }
+}
